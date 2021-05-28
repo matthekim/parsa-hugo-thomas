@@ -1,0 +1,12 @@
+---
+label: Companies Holder
+hide_body: true
+fields:
+- name: the_company_items
+  type: blocks
+  label: The company Items
+  template_types:
+  - company-item
+  config:
+    min: 
+    max: 

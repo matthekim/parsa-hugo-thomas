@@ -1,0 +1,51 @@
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBT532H"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  
+  <header class="">
+  <div class="hamburger-holder">
+    <img src="{{ `img/hamburger.png` | absURL }}" alt="" class="hamburger" />
+  </div>
+  <a href="/"><img src="{{ `img/next-ventures.svg` | absURL }}" alt="" class="logo" /></a>
+  <div class="language-switcher textlink">
+    <a href="/eng">NL</a>
+  </div>
+</header>
+<div class="bg"><div class="bgImage-left"></div><div class="bgImage-right"></div></div>
+
+<div class="menu">
+  <div class="menu-BG"></div>
+  <div class="menu-holder">
+    <div class="menu-item"><a href="#who" onclick="dataLayer.push({'event': 'menu-who-click'});">Who</a></div>
+    <div class="menu-item"><a href="#companies" onclick="dataLayer.push({'event': 'menu-companies-click'});">Companies</a></div>
+    <div class="menu-item"><a href="#interested" onclick="dataLayer.push({'event': 'menu-interested-click'});">Interested?</a></div>
+    <div class="menu-item"><a href="#resources" onclick="dataLayer.push({'event': 'menu-resources-click'});">Resources</a></div>
+    <div class="menu-item"><a href="#about" onclick="dataLayer.push({'event': 'menu-about-click'});">About</a></div>
+    <div class="menu-item"><a href="#faq" onclick="dataLayer.push({'event': 'menu-faq-click'});">FAQ</a></div>
+  </div>
+</div>
+
+<!--
+<div style="position:absolute;width:100%;height:30px;top:100px;z-index:99999;">
+    {{ range site.Menus.main }}
+    {{ if .HasChildren }}
+      <a class="nav-link text-uppercase text-dark dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+        aria-expanded="false">
+        {{ .Name }}
+      </a>
+
+      {{ range .Children }}
+        <a class="dropdown-item" href="{{ .URL | absURL }}">{{ .Name }}</a>
+        {{ end }}
+    {{ else }}
+      <a class="nav-link text-uppercase text-dark" href="{{ .URL | absURL }}">{{ .Name }}</a>
+    {{ end }}
+    {{ end }}
+
+
+    {{ if site.Params.search }}
+
+  {{ end }}
+</div>
+-->

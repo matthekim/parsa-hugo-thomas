@@ -1,0 +1,14 @@
+---
+label: FAQQER
+hide_body: false
+fields:
+- name: faq_z
+  type: blocks
+  label: FAQ Z
+  template_types:
+  - faq-item
+  config:
+    min: 
+    max: 
+pages:
+- exampleSite/content/en/testfaq/faq1.md

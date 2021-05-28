@@ -1,0 +1,32 @@
+---
+label: Post
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: file
+  name: image
+  label: image
+- type: datetime
+  name: date
+  label: date
+- type: text
+  name: description
+  label: description
+- type: list
+  name: categories
+  label: categories
+- type: list
+  name: tags
+  label: tags
+- type: text
+  name: type
+  label: type
+pages:
+- exampleSite/content/en/about.md
+- exampleSite/content/en/faq/faq-1.md
+- exampleSite/content/en/faq/faq-2.md
+- exampleSite/content/en/faq/faq-3.md
+- exampleSite/content/en/who.md
+- exampleSite/content/nl/wie.md

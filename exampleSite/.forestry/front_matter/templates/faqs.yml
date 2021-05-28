@@ -1,0 +1,12 @@
+---
+label: FAQS
+hide_body: true
+fields:
+- name: faqq
+  type: blocks
+  label: faqq
+  template_types:
+  - faq-item
+  config:
+    min: 
+    max: 

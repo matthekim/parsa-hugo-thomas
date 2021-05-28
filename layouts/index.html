@@ -1,0 +1,485 @@
+{{ define "main" }}
+
+<main>
+  
+		<div class="main-item ">
+      <a class="anchor" id="who"></a>
+			<div class="main-text">
+        {{ if or (eq .Section "nl")  }}
+          {{ range first 1 ( where site.Pages "Type" "home-wie") }}
+            {{.Title}}
+            {{.Content }}
+          {{ end }}	
+        {{ else }}	
+          {{ range first 1 ( where site.Pages "Type" "home-who") }}
+            {{.Title}}
+            {{.Content }}
+          {{ end }}	
+        {{ end }}			
+      
+      </div>
+			<div class="grid items-6">
+				<div class="grid-item grid-item-center">
+					<img src="{{ `img/founded.svg` | absURL }}" alt="" class="items-6-icon" /><br>
+					<span class="title-grey">Founded</span><br>
+					2014
+					<!--<div class="items-6-title">2014</div>-->
+				</div>
+				<div class="grid-item grid-item-center">
+					<img src="{{ `img/location.svg` | absURL }}" alt="" class="items-6-icon" /><br>
+					<span class="title-grey">Location</span><br>
+						Antwerp
+						<!--<div class="items-6-title">Antwerp</div>-->
+				</div>
+				<div class="grid-item grid-item-center">
+					<img src="{{ `img/fund.svg` | absURL }}" alt="" class="items-6-icon" /><br>
+					<span class="title-grey">Fund Size</span><br>
+					Private
+						<!--<div class="items-6-title">Private</div>-->
+				</div>
+				
+				<div class="grid-item grid-item-center">
+						<img src="{{ `img/team.svg` | absURL }}" alt="" class="items-6-icon" /><br>
+						<span class="title-grey">Team</span><br>
+						4
+						<!--<div class="items-6-title">4</div>-->
+				</div>
+				<div class="grid-item grid-item-center">
+						<img src="{{ `img/area.svg` | absURL }}" alt="" class="items-6-icon" /><br>
+						<span class="title-grey">Area Focus</span><br>
+						Benelux
+						<!--<div class="items-6-title"></div>-->
+				</div>
+				<div class="grid-item grid-item-center">
+						<img src="{{ `img/stage.svg` | absURL }}" alt="" class="items-6-icon" /><br>
+						<span class="title-grey">Stage Focus</span><br>
+						Pre-seed
+						<!--<div class="items-6-title">Pre-seed</div>-->
+				</div>
+			</div>
+		</div>
+		<div class="hr"></div>
+
+    
+		<div class="main-item main-alternate">
+      <a class="anchor" id="companies"></a>
+			<div class="main-text">
+        {{ if or (eq .Section "nl")  }}
+          {{ range first 1 ( where site.Pages "Type" "home-bedrijf") }}
+          <h2>{{.Title}}</h2>
+            {{.Content }}
+          {{ end }}	
+        {{ else }}	
+          {{ range first 1 ( where site.Pages "Type" "home-companies") }}
+            <h2>{{.Title}}</h2>
+            {{.Content }}
+          {{ end }}	
+        {{ end }}
+			</div>
+			<div class="grid items-3 grid-gap50">
+
+				{{ range .Params.the_company_items }}
+					<h3>test</h3>
+				{{ end }}
+			
+				<div class="grid-item ">
+					<div class="logoHolder">	
+					<a href="http://www.apideck.com/" target="_blank" class="noUnderline">
+						<img src="{{ `img/api-deck.svg` | absURL }}" alt="" class="items-3-icon" />
+					</a>
+					</div>
+					<div class="items-3-title">
+						<h2 class="margin-bottom-zero">APIDECK</h2>
+						API Integration (re)defined<br>
+						Raising: just did &nbsp;&nbsp;Open Positions:  <a href="https://www.apideck.com/jobs" target="_blank">yes</a>
+					</div>
+				</div>
+
+			
+				<div class="grid-item ">
+            
+					<div class="logoHolder">	
+					<a href="http://boyandteddy.dog/" target="_blank" class="noUnderline">
+						<img src="{{ `img/boy-and-teddy.svg` | absURL }}" alt="" class="items-3-icon" />
+					</a>
+					</div>
+						<div class="items-3-title">
+							<h2 class="margin-bottom-zero">BOYANDTEDDY</h2>
+							Dog collars for fashionable pet parents<br>
+							Raising: 50k &nbsp;&nbsp;Open Positions: no
+						</div>
+						
+				</div>
+				<div class="grid-item ">
+					<div class="logoHolder">
+					<a href="https://complianceboard.io" target="_blank" class="noUnderline">
+						<img src="{{ `img/complianceboard.svg` | absURL }}" alt="" class="items-3-icon" />
+					</a>
+					</div>
+						<div class="items-3-title">
+							<h2 class="margin-bottom-zero">COMPLIANCEBOARD</h2>
+							Privacy Compliance for SaaS companies.<br>
+							Raising: 250k &nbsp;&nbsp;Open Positions:  <a href="https://angel.co/company/complianceboard/jobs" target="_blank">yes</a>
+						</div>
+						
+					
+				</div>
+				<div class="grid-item ">
+					<div class="logoHolder">
+					<a href="https://www.culasarsa.com" target="_blank" class="noUnderline">
+						<img src="{{ `img/culasarsa.svg` | absURL }}" alt="" class="items-3-icon" />
+					</a>
+					</div>
+						<div class="items-3-title">
+							<h2 class="margin-bottom-zero">CULASARSA</h2>
+							Online mercato making cooking sexy<br>
+							Raising: 25k &nbsp;&nbsp;Open Positions:  <a href="https://www.linkedin.com/company/culasarsa/jobs/" target="_blank">yes</a>
+						</div>
+					
+					
+				</div>
+				<div class="grid-item ">
+					<div class="logoHolder">
+            
+					<a href="https://www.mast-agency.be" target="_blank" class="noUnderline">
+						<img src="{{ `img/mast-agency.svg` | absURL }}" alt="" class="items-3-icon" />
+					</a>
+				</div>
+						<div class="items-3-title">
+							<h2 class="margin-bottom-zero">MAST AGENCY</h2>
+							Storytelling and branding agency<br>
+							Raising: no &nbsp;&nbsp;Open Positions:  <a href="https://www.mast-agency.be/jobs/" target="_blank">yes</a>
+						</div>					
+				</div>
+				<div class="grid-item ">
+					<div class="logoHolder">
+						<a href="https://wakinglife.pt" target="_blank" class="noUnderline">
+							<img src="{{ `img/wakinglife.svg` | absURL }}" alt="" class="items-3-icon" />
+						</a>
+					</div>
+					<div class="items-3-title">
+						<h2 class="margin-bottom-zero">WAKINGLIFE</h2>
+						Music &amp; Art Festival Portugal<br>
+						Raising: no &nbsp;&nbsp;Open Positions: no
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div class="hr"></div>
+
+    
+		<div class="main-item ">
+      <a class="anchor" id="interested"></a>
+			<div class="main-text">
+        {{ if or (eq .Section "nl")  }}
+        {{ range first 1 ( where site.Pages "Type" "home-interesse") }}
+        <h2>{{.Title}}</h2>
+          {{.Content }}
+        {{ end }}	
+      {{ else }}	
+        {{ range first 1 ( where site.Pages "Type" "home-interested") }}
+          <h2>{{.Title}}</h2>
+          {{.Content }}
+        {{ end }}	
+      {{ end }}
+			</div>
+		</div>
+
+
+
+		<div class="main-item main-alternate">
+      <a class="anchor" id="resources"></a>
+			<div class="main-text ">
+        {{ if or (eq .Section "nl")  }}
+        {{ range first 1 ( where site.Pages "Type" "home-hulpmiddelen") }}
+        <h2>{{.Title}}</h2>
+          {{.Content }}
+        {{ end }}	
+      {{ else }}	
+        {{ range first 1 ( where site.Pages "Type" "home-resources") }}
+          <h2>{{.Title}}</h2>
+          {{.Content }}
+        {{ end }}	
+      {{ end }}
+			</div>
+			
+			
+			
+			<div class="grid items-3-more grid-gap20">
+				<div class="grid-item ">
+					<div class="grid-item ">
+						<div class="grid-item-intro">
+							<h3>To start or not to start?</h3>
+							<p>Material to help your thinking.</p>
+						</div>
+					</div>
+					<a href="http://startupclass.samaltman.com/" target="_blank" class="link">
+					<div class="grid-item ">
+						<div class="textlink">
+							<img src="{{ `img/wrench.svg` | absURL }}" alt="" class="items-3-icon-small" />
+							<div class="items-3-info-small ">
+								<strong>How to Start a Startup</strong><br>
+								Y Combinator
+							</div>
+						</div>
+					</div>
+					</a>
+					<a href="http://www.paulgraham.com/articles.html" target="_blank" class="link">
+				<div class="grid-item ">
+					<div class="textlink">
+						<img src="{{ `img/wrench.svg` | absURL }}" alt="" class="items-3-icon-small" />
+						<div class="items-3-info-small ">
+							<p><strong>Extraordinary Essays</strong><br>
+							Paul Graham</p>
+						</div>
+					</div>
+				</div>
+				</a>
+				<a href="https://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action" target="_blank" class="link">
+				<div class="grid-item ">
+					<div class="textlink">
+						<img src="{{ `img/ted.svg` | absURL }}" alt="" class="items-3-icon-small" />
+						<div class="items-3-info-small ">
+							<p><strong>Start With Why</strong><br>
+							Simon Sinek</p>
+						</div>
+					</div>
+				</div>
+				</a>
+				<a href="https://www.amazon.com/Lean-Startup-Entrepreneurs-Continuous-Innovation/dp/0307887898" target="_blank" class="link">
+				<div class="grid-item ">
+					<div class="textlink">
+						<img src="{{ `img/books.svg` | absURL }}" alt="" class="items-3-icon-small" />
+						<div class="items-3-info-small ">
+							<p><strong>Lean Startup</strong><br>
+							Eric Ries</p>
+						</div>
+					</div>
+				</div>
+				</a>
+
+				<a href="https://www.amazon.com/Team-Teams-Rules-Engagement-Complex/dp/1591847486" target="_blank" class="link">
+				<div class="grid-item ">
+					<div class="textlink">
+						<img src="{{ `img/books.svg` | absURL }}" alt="" class="items-3-icon-small" />
+						<div class="items-3-info-small ">
+							<p><strong>Team of Teams</strong><br>
+							General Stanley McChrystal</p>
+						</div>
+					</div>
+				</div>
+				</a>
+
+				<a href="https://a16z.com/2015/05/28/some-career-advice-for-all-you-recent-graduates/" target="_blank" class="link">
+				<div class="grid-item ">
+					<div class="textlink">
+						<img src="{{ `img/youtube.svg` | absURL }}" alt="" class="items-3-icon-small" />
+						<div class="items-3-info-small ">
+							<p><strong>Don't Follow Your Passion<br>Follow Your Contribution</strong><br>
+							Ben Horowitz</p>
+						</div>
+					</div>
+				</div>
+				</a>
+				</div>
+				
+				
+				<div class="grid-item ">
+					<div class="grid-item ">
+						<div class="grid-item-intro">
+							<h3>Here's a little something, too.</h3>
+							<p>Legal documents, pitch decks, templates <br>
+							&amp; other goodies. </p>
+						</div>
+					</div>
+					<a href="https://en.wikipedia.org/wiki/The_Black_Swan:_The_Impact_of_the_Highly_Improbable" target="_blank" class="link">
+					<div class="grid-item ">
+						<div class="textlink">
+							<img src="{{ `img/swan.svg` | absURL }}" alt="" class="items-3-icon-small" />
+							<div class="items-3-info-small ">
+								<p><strong>Black Swan</strong><br>
+								Nassim Taleb</p>
+							</div>
+						</div>
+					</div>
+					</a>
+					<a href="https://schoolofherring.com/" target="_blank" class="link">
+				<div class="grid-item ">
+					<div class="textlink">
+						<img src="{{ `img/ted.svg` | absURL }}" alt="" class="items-3-icon-small" />
+						<div class="items-3-info-small ">
+							<p><strong>School of Herring<br>Thoughts of Leadership</strong><br>
+							Mårten Mickos</p>
+						</div>
+					</div>
+				</div>
+				</a>
+				<a href="https://www.amazon.com/Creativity-Inc-Overcoming-Unseen-Inspiration/dp/0812993012" target="_blank" class="link">
+				<div class="grid-item ">
+					<div class="textlink">
+						<img src="{{ `img/books.svg` | absURL }}" alt="" class="items-3-icon-small" />
+						<div class="items-3-info-small ">
+							<p><strong>Creativity Inc</strong><br>
+							Ed Catmull</p>
+						</div>
+					</div>
+				</div>
+				</a>
+				<a href="https://www.ted.com/talks/julian_treasure_how_to_speak_so_that_people_want_to_listen" target="_blank" class="link">
+				<div class="grid-item ">
+					<div class="textlink">
+						<img src="{{ `img/ted.svg` | absURL }}" alt="" class="items-3-icon-small" />
+						<div class="items-3-info-small ">
+							<p><strong>How to Speak so <br>People Want To Listen</strong><br>
+							Julian Treasure</p>
+						</div>
+					</div>
+				</div>
+				</a>
+				<a href="https://www.ted.com/talks/tony_robbins_why_we_do_what_we_do#t-376260" target="_blank" class="link">
+				<div class="grid-item ">
+					<div class="textlink">
+						<img src="{{ `img/ted.svg` | absURL }}" alt="" class="items-3-icon-small" />
+						<div class="items-3-info-small ">
+							<p><strong>Why We Do What We Do</strong><br>
+							Tony Robbins</p>
+						</div>
+					</div>
+				</div>
+				</a>
+				<a href="https://www.ted.com/talks/amy_cuddy_your_body_language_may_shape_who_you_are#t-166162" target="_blank" class="link">
+				<div class="grid-item ">
+					<div class="textlink">
+						<img src="{{ `img/ted.svg` | absURL }}" alt="" class="items-3-icon-small" />
+						<div class="items-3-info-small ">
+							<p><strong>Your Body Language <br>Shapes Who You Are</strong><br>
+							Amy Cuddy</p>
+						</div>
+					</div>
+				</div>
+				</a>
+				
+				</div>
+				
+				
+				<div class="grid-item ">
+					<div class="grid-item ">
+						<div class="grid-item-intro">
+							<h3>Ok, so you'll start.</h3>
+								<p>How the heck to design, inspire, 
+								lead and manage?</p>
+						</div>
+					</div>
+					<a href="http://startuplawyer.com/" target="_blank" class="link">
+					<div class="grid-item ">
+						<div class="textlink">
+							<img src="{{ `img/hammer.svg` | absURL }}" alt="" class="items-3-icon-small" />
+							<div class="items-3-info-small ">
+								<p><strong>Useful Insights on <br>Legal Matters</strong><br>
+								Startup Lawyer</p>
+							</div>
+						</div>
+					</div>
+					</a>
+					<a href="https://a16z.com/advice-and-how-to/" target="_blank" class="link">
+				<div class="grid-item ">
+					<div class="textlink">
+						<img src="{{ `img/star.svg` | absURL }}" alt="" class="items-3-icon-small" />
+						<div class="items-3-info-small ">
+							<p><strong>Top Picks from <br>Various Practical Topics</strong><br>
+							Andreessen Horowitz</p>
+						</div>
+					</div>
+				</div>
+				</a>
+				<a href="https://www.slideshare.net/PitchDeckCoach/sequoia-capital-pitchdecktemplate" target="_blank" class="link">
+				<div class="grid-item ">
+					<div class="textlink">
+						<img src="{{ `img/wrench.svg` | absURL }}" alt="" class="items-3-icon-small" />
+						<div class="items-3-info-small ">
+							<p><strong>Pitch Deck Template</strong><br>
+							Sequoia Capital</p>
+						</div>
+					</div>
+				</div>
+				</a>
+				<a href="https://www.seriesseed.fi/" target="_blank" class="link">
+				<div class="grid-item ">
+					<div class="textlink">
+						<img src="{{ `img/wrench.svg` | absURL }}" alt="" class="items-3-icon-small" />
+						<div class="items-3-info-small ">
+							<p><strong>Open Source Early Stage <br>
+								Investment Documents</strong><br>
+							seriesseed.fi</p>
+						</div>
+					</div>
+				</div>
+				</a>
+				<a href="https://startupstash.com/" target="_blank" class="link">
+				<div class="grid-item ">
+					<div class="textlink">
+						<img src="{{ `img/wrench.svg` | absURL }}" alt="" class="items-3-icon-small" />
+						<div class="items-3-info-small ">
+							<p><strong>A Comprehensive List of Tools <br>
+							and Resources for Startups</strong><br>
+							Startup Stash</p>
+						</div>
+					</div>
+				</div>
+				</a>
+				<a href="https://www.cirrusinsight.com/blog/startup-pitch-decks" target="_blank" class="link">
+				<div class="grid-item ">
+					<div class="textlink">
+						<img src="{{ `img/wrench.svg` | absURL }}" alt="" class="items-3-icon-small" />
+						<div class="items-3-info-small ">
+							<p><strong>Examples of Decks <br>Which Raised Over 400M</strong>
+							</p>
+						</div>
+					</div>
+				</div>
+				</a>
+				</div>
+				
+				<!-- -->
+			</div>
+		</div>
+
+    
+		<div class="main-item ">
+      <a class="anchor" id="about"></a>
+			<div class="main-text">
+				{{ if or (eq .Section "nl")  }}
+        {{ range first 1 ( where site.Pages "Type" "home-over") }}
+        <h2>{{.Title}}</h2>
+          {{.Content }}
+        {{ end }}	
+      {{ else }}	
+        {{ range first 1 ( where site.Pages "Type" "home-about") }}
+          <h2>{{.Title}}</h2>
+          {{.Content }}
+        {{ end }}	
+      {{ end }}
+
+			</div>
+		</div>
+
+    
+		<div class="main-item main-alternate">
+      <a class="anchor" id="faq"></a>
+			<div class="main-text">
+				<h2>FAQ</h2>
+			</div>
+      {{ range first 100 ( where site.Pages "Type" "home-faq") }}
+			<div class="faq-textholder faq">
+				<div class="faq-title"><div class="dropdown"></div>{{.Title}}</div>
+				<div class="faq-text">
+					<p>{{.Content}}</p>
+				</div>
+			</div>
+      {{end}}
+
+		</div>
+
+</main>
+{{ end }}

@@ -1,0 +1,29 @@
+---
+label: company item
+hide_body: false
+display_field: company_name
+fields:
+- name: company_name
+  type: text
+  config:
+    required: false
+  label: Company Name
+- name: company_text
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Company Text
+- name: company_website
+  type: text
+  config:
+    required: false
+  label: Company Website
+- name: company_logo_svg
+  type: file
+  config:
+    maxSize: 64
+  label: Company Logo SVG

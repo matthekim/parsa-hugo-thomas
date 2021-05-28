@@ -1,0 +1,94 @@
+baseurl = "https://nextventures.netlify.app/"
+googleAnalytics = ""
+languageCode = "en-us"
+paginate = 6
+summaryLength = "10"
+theme = "parsa-hugo"
+title = "Next Ventures | We start, grow, and invest in fantastic (internet) businesses."
+[[menu.main]]
+name = "Homepage 2"
+parent = "Homepage"
+url = "homepage/home-2"
+weight = 2
+[[menu.main]]
+name = "Homepage 1"
+parent = "Homepage"
+url = "homepage/home-1"
+weight = 1
+[[menu.main]]
+hasChildren = true
+name = "Homepage"
+weight = 3
+[[menu.main]]
+name = "About"
+url = "about"
+weight = 2
+[[menu.main]]
+name = "Contact"
+url = "contact"
+weight = 1
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+[params]
+address = ""
+author = "Johan De Keulenaer"
+author_image = "images/next-ventures.svg"
+bio = "Hi, we’re Next Ventures, let’s do big things good.\n\nWe start, grow, and invest in fantastic (internet) businesses. We help ambitious people to turn ideas into companies. We co-create tangible business results while sharing risks & rewards."
+contact_form_action = "#"
+copyright = "&copy; 2021"
+description = "Next Ventures | We start, grow, and invest in fantastic (internet) businesses."
+email = "info@nextventures.be"
+home = "Home"
+keywords = "Next Ventures - grow - invest - consulting - strategic studio - apideck - complianceboard - culasarsa - Johan de keulenaer - Gertjan De Wilde - Antwerpen - Antwerp"
+layout = "1"
+logo = "images/next-ventures.svg"
+mobile = ""
+preloader = false
+privacydoc = ""
+search = false
+[params.cookies]
+enable = true
+expire_days = 2
+[params.instafeed]
+access_token = "IGQVJYeUk4YWNIY1h4OWZANeS1wRHZARdjJ5QmdueXN2RFR6NF9iYUtfcGp1NmpxZA3RTbnU1MXpDNVBHTzZAMOFlxcGlkVHBKdjhqSnUybERhNWdQSE5hVmtXT013MEhOQVJJRGJBRURn"
+enable = true
+[[params.plugins.css]]
+link = "plugins/bootstrap/bootstrap.min.css"
+[[params.plugins.css]]
+link = "plugins/slick/slick.css"
+[[params.plugins.css]]
+link = "plugins/themify-icons/themify-icons.css"
+[[params.plugins.js]]
+link = "plugins/jQuery/jquery.min.js"
+[[params.plugins.js]]
+link = "plugins/bootstrap/bootstrap.min.js"
+[[params.plugins.js]]
+link = "plugins/slick/slick.min.js"
+[[params.plugins.js]]
+link = "plugins/headroom/headroom.js"
+[[params.plugins.js]]
+link = "plugins/instafeed/instafeed.min.js"
+[[params.plugins.js]]
+link = "plugins/masonry/masonry.js"
+[[params.plugins.js]]
+link = "plugins/reading-time/readingTime.min.js"
+[[params.plugins.js]]
+link = "plugins/smooth-scroll/smooth-scroll.js"
+[[params.plugins.js]]
+link = "plugins/search/fuse.min.js"
+[[params.plugins.js]]
+link = "plugins/search/mark.js"
+[[params.plugins.js]]
+link = "plugins/search/search.js"
+[[params.social]]
+icon = "ti-facebook"
+url = "#"
+[[params.social]]
+icon = "ti-twitter-alt"
+url = "#"
+[[params.social]]
+icon = "ti-linkedin"
+url = "#"
+[[params.social]]
+icon = "ti-github"
+url = "#"
